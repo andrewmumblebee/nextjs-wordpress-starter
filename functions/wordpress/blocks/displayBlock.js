@@ -55,9 +55,6 @@ const BlockSeparator = dynamic(() =>
 const BlockSpacer = dynamic(() =>
   import('@/components/blocks/Gutenberg/BlockSpacer')
 )
-const BlockGravityForm = dynamic(() =>
-  import('@/components/blocks/Gutenberg/BlockGravityForm')
-)
 const LzbBlockMediaText = dynamic(() =>
   import('@/components/blocks/LazyBlocks/LzbBlockMediaText')
 )
@@ -131,11 +128,6 @@ export default function displayBlock(block, index) {
 
     case 'core/table':
       return <BlockTable {...attributes} key={index} />
-
-    /* -- GRAVITY FORMS BLOCKS -- */
-
-    case 'gravityforms/form':
-      return <BlockGravityForm {...attributes} key={index} />
 
     /* -- LAZY BLOCKS -- */
 

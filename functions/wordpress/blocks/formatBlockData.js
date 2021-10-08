@@ -1,4 +1,3 @@
-import getGfFormById from '@/functions/wordpress/gravityForms/getGfFormById'
 import getMediaByID from '@/functions/wordpress/media/getMediaByID'
 
 /**
@@ -28,11 +27,6 @@ export default async function formatBlockData(blocks) {
         case 'core/image':
           // Retrieve additional image meta.
           attributes.imageMeta = await getMediaByID(attributes?.id)
-          break
-
-        case 'gravityforms/form':
-          // Retrieve form data.
-          attributes.formData = await getGfFormById(attributes?.formId)
           break
       }
 
