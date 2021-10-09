@@ -26,7 +26,7 @@ export default async function getPostTypeStaticProps(
   previewData = null
 ) {
   // Set revalidate length (seconds).
-  const revalidate = 60 * 5
+  const revalidate = 10
 
   // Set sharedProps.
   const sharedProps = {
